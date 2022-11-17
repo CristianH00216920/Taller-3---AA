@@ -36,9 +36,9 @@ int coinExchange(int *coins, int target, int coinsNumb)
 
 int main()
 {
-	int coins[] = {1, 5, 10, 20, 100}; // denomination of dollars, arrays for values to use.
+	int coins[] = {1, 5, 10, 20, 100}; 
 
-	int target; // amoung of dollars that will be withdraw
+	int target; 
 	cout << "Ingrese cantidad de dolares: ";
 	cin >> target;
 
