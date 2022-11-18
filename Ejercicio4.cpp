@@ -47,12 +47,11 @@ int main()
 	if (balance >= 1 && balance <= pow(10, 9)) //
 	{
 		cout << "\nEl numero de billetes a entregar es: " << withDrawCash(dollarsBills, balance, 5); // Llamamos funcion y pasamos variables como parametros
-																									 // imprimimos la cantidad minima de billetes que optendra al sacar su balance total.
+		// imprimimos la cantidad minima de billetes que optendra al sacar su balance total.
 	}
 	else
 	{
 		cout << "\nNo se puede procesar el monto. "; // imprimir información
 	}
-
-	return 0; // retornando 0
+	
 }
