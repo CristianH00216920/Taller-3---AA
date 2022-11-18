@@ -1,38 +1,33 @@
-// C++ program to find Maximum Product Subarray
-#include <bits/stdc++.h>
+#include <iostream>
+
 using namespace std;
-  
-/* Returns the product of max product subarray.*/
-int maxSubarrayProduct(int arr[], int n)
+
+int max_1d_range_mult(int* A, int n)
 {
-    // Initializing result
-    int result = arr[0];
-  
-    for (int i = 0; i < n; i++) 
+    int M[n + 1], S=1;
+    int smax, smin;
+
+    M[0] = 0;
+    
+    for (int i = 1; i <= n ; i++)
     {
-        int mul = arr[i];
-        // traversing in current subarray
-        for (int j = i + 1; j < n; j++) 
-        {
-            // updating result every time
-            // to keep an eye over the maximum product
-            result = max(result, mul);
-            mul *= arr[j];
-        }
-        // updating the result for (n-1)th index.
-        result = max(result, mul);
+         
+         if (M[i] < 0)
+         {
+             M[i] = max(smax, M[i - 1]); 
+             M[i] = min(smin, M[i + 1]); 
+         }
+
     }
-    return result;
+
+
 }
-  
-// Driver code
-int main()
+
+int main(void)
 {
-    int arr[] = { 1, -2, -3, 0 };
-    int n = sizeof(arr) / sizeof(arr[0]);
-    cout << "Maximum Sub array product is "
-         << maxSubarrayProduct(arr, n);
-    return 0;
+    int n=4;
+    int A[n] = {-2, 4, 6, 3};
+    
+    cout<< max_1d_range_mult(A, n);
+
 }
-  
-// This code is contributed by Aditya Kumar (adityakumar129)

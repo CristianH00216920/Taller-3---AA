@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int max_1d_range_sum(int *A, int n) // funcion con parametros, tamaño y arreglo A
+int max_1d_range_sum(int* A, int n) // funcion con parametros, tamaño y arreglo A
 {
     int M[n + 1], S = 0; // preparamos el arreglo M y agregar una celda extra para evitar no violar segmentos, asignamos nuestro acumular S
 

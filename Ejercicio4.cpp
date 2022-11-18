@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int withDrawCash(int *dollarsBills, int balance, int numb) // funcion con parametros
+int withDrawCash(int* dollarsBills, int balance, int numb) // funcion con parametros
 {
 
 	int T[balance + 1]; // preparamos el arreglo T y agregar una celda extra para evitar no violar segmentos
